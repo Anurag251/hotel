@@ -31,7 +31,7 @@
         <ul class="nav-links">
           <li>
             <a href="index.html">
-              <button class="nav-btn active">Home</button>
+              <button class="nav-btn">Home</button>
             </a>
           </li>
 
@@ -43,7 +43,7 @@
 
           <li>
             <a href="rooms.html">
-              <button class="nav-btn">Rooms</button>
+              <button class="nav-btn active">Rooms</button>
             </a>
           </li>
 
@@ -253,62 +253,8 @@
     </div>
     <!-- hotel-search-end -->
 
-    <!-- about-start -->
-    <section>
-      <div class="about">
-        <div class="image-sec">
-          <img src="./assets/images/about.png" alt="" />
-        </div>
-
-        <div class="wrapper">
-          <div></div>
-
-          <div class="details-sec">
-            <div class="title">
-              <h4>OUR HOTEL</h4>
-              <h2>The Hotel Name</h2>
-            </div>
-
-            <p>
-              Finally, it all comes down to people. Creating a winning team and
-              self-sustaining culture takes difficult work, and there is no
-              substitute for it. Going forward with us.
-            </p>
-            <br />
-            <p>
-              As important as strategy is, we have to execute to win. Execution
-              involves every employee and every relation we have with customers.
-              We must operate quickly on problems.
-            </p>
-            <br />
-            <p>
-              Finally, it all comes down to people. Creating a winning team and
-              self-sustaining culture takes difficult work, and there is no
-              substitute for it. Going forward with us.
-            </p>
-            <br />
-            <p>
-              As important as strategy is, we have to execute to win. Execution
-              involves every employee and every relation we have with customers.
-              We must operate quickly on problems.
-            </p>
-
-            <h5>Call us at: +123 456 789</h5>
-
-            <a href="about-us.html">
-              <button>
-                Learn More
-                <img src="./assets/icon/arrow-right-dark.svg" alt="" />
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- about-end -->
-
     <!-- Hotel-rooms-start -->
-    <section class="bg">
+    <sections>
       <div class="wrapper">
         <div class="hotel-rooms">
           <div class="title">
@@ -1090,368 +1036,785 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="view-all-btn">
-            <a href="#">
-              <button>Explore More Rooms</button>
-            </a>
+            <div class="item">
+              <div class="image-area">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room1.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room2.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room3.png" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="swiper-button-next">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="28"
+                        y="42"
+                        width="28"
+                        height="42"
+                        transform="rotate(-180 28 42)"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M11.1023 14.9607L16.9893 20.9999L11.1023 27.0392C10.9969 27.1471 10.9379 27.2919 10.9379 27.4428C10.9379 27.5936 10.9969 27.7384 11.1023 27.8463C11.1534 27.8986 11.2145 27.9401 11.282 27.9684C11.3494 27.9968 11.4218 28.0114 11.495 28.0114C11.5681 28.0114 11.6405 27.9968 11.7079 27.9684C11.7754 27.9401 11.8365 27.8986 11.8877 27.8463L18.1517 21.4216C18.2616 21.3088 18.3232 21.1575 18.3232 20.9999C18.3232 20.8424 18.2616 20.691 18.1517 20.5782L11.8889 14.1535C11.8376 14.1009 11.7764 14.0591 11.7087 14.0305C11.6411 14.002 11.5684 13.9872 11.495 13.9872C11.4215 13.9872 11.3488 14.002 11.2812 14.0305C11.2135 14.0591 11.1523 14.1009 11.101 14.1535C10.9957 14.2614 10.9366 14.4063 10.9366 14.5571C10.9366 14.7079 10.9957 14.8528 11.101 14.9607L11.1023 14.9607Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="28"
+                        height="42"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M16.8977 27.0393L11.0107 21.0001L16.8977 14.9608C17.0031 14.8529 17.0621 14.7081 17.0621 14.5572C17.0621 14.4064 17.0031 14.2616 16.8977 14.1537C16.8466 14.1014 16.7855 14.0599 16.718 14.0316C16.6506 14.0032 16.5782 13.9886 16.505 13.9886C16.4319 13.9886 16.3595 14.0032 16.2921 14.0316C16.2246 14.0599 16.1635 14.1014 16.1123 14.1537L9.84833 20.5784C9.73836 20.6912 9.67681 20.8425 9.67681 21.0001C9.67681 21.1576 9.73836 21.309 9.84833 21.4218L16.1111 27.8465C16.1624 27.8991 16.2236 27.9409 16.2913 27.9695C16.3589 27.998 16.4316 28.0128 16.505 28.0128C16.5785 28.0128 16.6512 27.998 16.7188 27.9695C16.7865 27.9409 16.8477 27.8991 16.899 27.8465C17.0044 27.7386 17.0634 27.5937 17.0634 27.4429C17.0634 27.2921 17.0044 27.1472 16.899 27.0393L16.8977 27.0393Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="body-area">
+                <div class="top-sec">
+                  <div class="na_ra_sec">
+                    <a href="#">
+                      <div class="name">Deluxe King Room</div>
+                    </a>
+
+                    <div class="rating">
+                      <div class="stars" data-value="3"></div>
+                    </div>
+                  </div>
+
+                  <div class="price">
+                    <span>From</span>
+                    <h4>$22</h4>
+                  </div>
+                </div>
+
+                <a href="#">
+                  <button>
+                    BOOK NOW
+                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
+                  </button>
+                </a>
+              </div>
+
+              <div class="footer-area">
+                <div class="hotel-feature-list">
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/av.png" alt="" />
+                    </div>
+                    <div class="name">AC</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/tv.png" alt="" />
+                    </div>
+                    <div class="name">Smart TV</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/wifi.png" alt="" />
+                    </div>
+                    <div class="name">High Wi-fi</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/swimming-pool.png" alt="" />
+                    </div>
+                    <div class="name">Pool</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/parking.png" alt="" />
+                    </div>
+                    <div class="name">Parking</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image-area">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room4.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room5.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room6.png" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="swiper-button-next">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="28"
+                        y="42"
+                        width="28"
+                        height="42"
+                        transform="rotate(-180 28 42)"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M11.1023 14.9607L16.9893 20.9999L11.1023 27.0392C10.9969 27.1471 10.9379 27.2919 10.9379 27.4428C10.9379 27.5936 10.9969 27.7384 11.1023 27.8463C11.1534 27.8986 11.2145 27.9401 11.282 27.9684C11.3494 27.9968 11.4218 28.0114 11.495 28.0114C11.5681 28.0114 11.6405 27.9968 11.7079 27.9684C11.7754 27.9401 11.8365 27.8986 11.8877 27.8463L18.1517 21.4216C18.2616 21.3088 18.3232 21.1575 18.3232 20.9999C18.3232 20.8424 18.2616 20.691 18.1517 20.5782L11.8889 14.1535C11.8376 14.1009 11.7764 14.0591 11.7087 14.0305C11.6411 14.002 11.5684 13.9872 11.495 13.9872C11.4215 13.9872 11.3488 14.002 11.2812 14.0305C11.2135 14.0591 11.1523 14.1009 11.101 14.1535C10.9957 14.2614 10.9366 14.4063 10.9366 14.5571C10.9366 14.7079 10.9957 14.8528 11.101 14.9607L11.1023 14.9607Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="28"
+                        height="42"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M16.8977 27.0393L11.0107 21.0001L16.8977 14.9608C17.0031 14.8529 17.0621 14.7081 17.0621 14.5572C17.0621 14.4064 17.0031 14.2616 16.8977 14.1537C16.8466 14.1014 16.7855 14.0599 16.718 14.0316C16.6506 14.0032 16.5782 13.9886 16.505 13.9886C16.4319 13.9886 16.3595 14.0032 16.2921 14.0316C16.2246 14.0599 16.1635 14.1014 16.1123 14.1537L9.84833 20.5784C9.73836 20.6912 9.67681 20.8425 9.67681 21.0001C9.67681 21.1576 9.73836 21.309 9.84833 21.4218L16.1111 27.8465C16.1624 27.8991 16.2236 27.9409 16.2913 27.9695C16.3589 27.998 16.4316 28.0128 16.505 28.0128C16.5785 28.0128 16.6512 27.998 16.7188 27.9695C16.7865 27.9409 16.8477 27.8991 16.899 27.8465C17.0044 27.7386 17.0634 27.5937 17.0634 27.4429C17.0634 27.2921 17.0044 27.1472 16.899 27.0393L16.8977 27.0393Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="body-area">
+                <div class="top-sec">
+                  <div class="na_ra_sec">
+                    <a href="#">
+                      <div class="name">Deluxe King Room</div>
+                    </a>
+
+                    <div class="rating">
+                      <div class="stars" data-value="3"></div>
+                    </div>
+                  </div>
+
+                  <div class="price">
+                    <span>From</span>
+                    <h4>$22</h4>
+                  </div>
+                </div>
+
+                <a href="#">
+                  <button>
+                    BOOK NOW
+                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
+                  </button>
+                </a>
+              </div>
+
+              <div class="footer-area">
+                <div class="hotel-feature-list">
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/av.png" alt="" />
+                    </div>
+                    <div class="name">AC</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/tv.png" alt="" />
+                    </div>
+                    <div class="name">Smart TV</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/wifi.png" alt="" />
+                    </div>
+                    <div class="name">High Wi-fi</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/swimming-pool.png" alt="" />
+                    </div>
+                    <div class="name">Pool</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/parking.png" alt="" />
+                    </div>
+                    <div class="name">Parking</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image-area">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room2.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room3.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room4.png" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="swiper-button-next">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="28"
+                        y="42"
+                        width="28"
+                        height="42"
+                        transform="rotate(-180 28 42)"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M11.1023 14.9607L16.9893 20.9999L11.1023 27.0392C10.9969 27.1471 10.9379 27.2919 10.9379 27.4428C10.9379 27.5936 10.9969 27.7384 11.1023 27.8463C11.1534 27.8986 11.2145 27.9401 11.282 27.9684C11.3494 27.9968 11.4218 28.0114 11.495 28.0114C11.5681 28.0114 11.6405 27.9968 11.7079 27.9684C11.7754 27.9401 11.8365 27.8986 11.8877 27.8463L18.1517 21.4216C18.2616 21.3088 18.3232 21.1575 18.3232 20.9999C18.3232 20.8424 18.2616 20.691 18.1517 20.5782L11.8889 14.1535C11.8376 14.1009 11.7764 14.0591 11.7087 14.0305C11.6411 14.002 11.5684 13.9872 11.495 13.9872C11.4215 13.9872 11.3488 14.002 11.2812 14.0305C11.2135 14.0591 11.1523 14.1009 11.101 14.1535C10.9957 14.2614 10.9366 14.4063 10.9366 14.5571C10.9366 14.7079 10.9957 14.8528 11.101 14.9607L11.1023 14.9607Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="28"
+                        height="42"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M16.8977 27.0393L11.0107 21.0001L16.8977 14.9608C17.0031 14.8529 17.0621 14.7081 17.0621 14.5572C17.0621 14.4064 17.0031 14.2616 16.8977 14.1537C16.8466 14.1014 16.7855 14.0599 16.718 14.0316C16.6506 14.0032 16.5782 13.9886 16.505 13.9886C16.4319 13.9886 16.3595 14.0032 16.2921 14.0316C16.2246 14.0599 16.1635 14.1014 16.1123 14.1537L9.84833 20.5784C9.73836 20.6912 9.67681 20.8425 9.67681 21.0001C9.67681 21.1576 9.73836 21.309 9.84833 21.4218L16.1111 27.8465C16.1624 27.8991 16.2236 27.9409 16.2913 27.9695C16.3589 27.998 16.4316 28.0128 16.505 28.0128C16.5785 28.0128 16.6512 27.998 16.7188 27.9695C16.7865 27.9409 16.8477 27.8991 16.899 27.8465C17.0044 27.7386 17.0634 27.5937 17.0634 27.4429C17.0634 27.2921 17.0044 27.1472 16.899 27.0393L16.8977 27.0393Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="body-area">
+                <div class="top-sec">
+                  <div class="na_ra_sec">
+                    <a href="#">
+                      <div class="name">Deluxe King Room</div>
+                    </a>
+
+                    <div class="rating">
+                      <div class="stars" data-value="3"></div>
+                    </div>
+                  </div>
+
+                  <div class="price">
+                    <span>From</span>
+                    <h4>$22</h4>
+                  </div>
+                </div>
+
+                <a href="#">
+                  <button>
+                    BOOK NOW
+                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
+                  </button>
+                </a>
+              </div>
+
+              <div class="footer-area">
+                <div class="hotel-feature-list">
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/av.png" alt="" />
+                    </div>
+                    <div class="name">AC</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/tv.png" alt="" />
+                    </div>
+                    <div class="name">Smart TV</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/wifi.png" alt="" />
+                    </div>
+                    <div class="name">High Wi-fi</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/swimming-pool.png" alt="" />
+                    </div>
+                    <div class="name">Pool</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/parking.png" alt="" />
+                    </div>
+                    <div class="name">Parking</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image-area">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room3.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room5.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room6.png" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="swiper-button-next">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="28"
+                        y="42"
+                        width="28"
+                        height="42"
+                        transform="rotate(-180 28 42)"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M11.1023 14.9607L16.9893 20.9999L11.1023 27.0392C10.9969 27.1471 10.9379 27.2919 10.9379 27.4428C10.9379 27.5936 10.9969 27.7384 11.1023 27.8463C11.1534 27.8986 11.2145 27.9401 11.282 27.9684C11.3494 27.9968 11.4218 28.0114 11.495 28.0114C11.5681 28.0114 11.6405 27.9968 11.7079 27.9684C11.7754 27.9401 11.8365 27.8986 11.8877 27.8463L18.1517 21.4216C18.2616 21.3088 18.3232 21.1575 18.3232 20.9999C18.3232 20.8424 18.2616 20.691 18.1517 20.5782L11.8889 14.1535C11.8376 14.1009 11.7764 14.0591 11.7087 14.0305C11.6411 14.002 11.5684 13.9872 11.495 13.9872C11.4215 13.9872 11.3488 14.002 11.2812 14.0305C11.2135 14.0591 11.1523 14.1009 11.101 14.1535C10.9957 14.2614 10.9366 14.4063 10.9366 14.5571C10.9366 14.7079 10.9957 14.8528 11.101 14.9607L11.1023 14.9607Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="28"
+                        height="42"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M16.8977 27.0393L11.0107 21.0001L16.8977 14.9608C17.0031 14.8529 17.0621 14.7081 17.0621 14.5572C17.0621 14.4064 17.0031 14.2616 16.8977 14.1537C16.8466 14.1014 16.7855 14.0599 16.718 14.0316C16.6506 14.0032 16.5782 13.9886 16.505 13.9886C16.4319 13.9886 16.3595 14.0032 16.2921 14.0316C16.2246 14.0599 16.1635 14.1014 16.1123 14.1537L9.84833 20.5784C9.73836 20.6912 9.67681 20.8425 9.67681 21.0001C9.67681 21.1576 9.73836 21.309 9.84833 21.4218L16.1111 27.8465C16.1624 27.8991 16.2236 27.9409 16.2913 27.9695C16.3589 27.998 16.4316 28.0128 16.505 28.0128C16.5785 28.0128 16.6512 27.998 16.7188 27.9695C16.7865 27.9409 16.8477 27.8991 16.899 27.8465C17.0044 27.7386 17.0634 27.5937 17.0634 27.4429C17.0634 27.2921 17.0044 27.1472 16.899 27.0393L16.8977 27.0393Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="body-area">
+                <div class="top-sec">
+                  <div class="na_ra_sec">
+                    <a href="#">
+                      <div class="name">Deluxe King Room</div>
+                    </a>
+
+                    <div class="rating">
+                      <div class="stars" data-value="3"></div>
+                    </div>
+                  </div>
+
+                  <div class="price">
+                    <span>From</span>
+                    <h4>$22</h4>
+                  </div>
+                </div>
+
+                <a href="#">
+                  <button>
+                    BOOK NOW
+                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
+                  </button>
+                </a>
+              </div>
+
+              <div class="footer-area">
+                <div class="hotel-feature-list">
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/av.png" alt="" />
+                    </div>
+                    <div class="name">AC</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/tv.png" alt="" />
+                    </div>
+                    <div class="name">Smart TV</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/wifi.png" alt="" />
+                    </div>
+                    <div class="name">High Wi-fi</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/swimming-pool.png" alt="" />
+                    </div>
+                    <div class="name">Pool</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/parking.png" alt="" />
+                    </div>
+                    <div class="name">Parking</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image-area">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room5.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room6.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room1.png" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="swiper-button-next">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="28"
+                        y="42"
+                        width="28"
+                        height="42"
+                        transform="rotate(-180 28 42)"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M11.1023 14.9607L16.9893 20.9999L11.1023 27.0392C10.9969 27.1471 10.9379 27.2919 10.9379 27.4428C10.9379 27.5936 10.9969 27.7384 11.1023 27.8463C11.1534 27.8986 11.2145 27.9401 11.282 27.9684C11.3494 27.9968 11.4218 28.0114 11.495 28.0114C11.5681 28.0114 11.6405 27.9968 11.7079 27.9684C11.7754 27.9401 11.8365 27.8986 11.8877 27.8463L18.1517 21.4216C18.2616 21.3088 18.3232 21.1575 18.3232 20.9999C18.3232 20.8424 18.2616 20.691 18.1517 20.5782L11.8889 14.1535C11.8376 14.1009 11.7764 14.0591 11.7087 14.0305C11.6411 14.002 11.5684 13.9872 11.495 13.9872C11.4215 13.9872 11.3488 14.002 11.2812 14.0305C11.2135 14.0591 11.1523 14.1009 11.101 14.1535C10.9957 14.2614 10.9366 14.4063 10.9366 14.5571C10.9366 14.7079 10.9957 14.8528 11.101 14.9607L11.1023 14.9607Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="28"
+                        height="42"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M16.8977 27.0393L11.0107 21.0001L16.8977 14.9608C17.0031 14.8529 17.0621 14.7081 17.0621 14.5572C17.0621 14.4064 17.0031 14.2616 16.8977 14.1537C16.8466 14.1014 16.7855 14.0599 16.718 14.0316C16.6506 14.0032 16.5782 13.9886 16.505 13.9886C16.4319 13.9886 16.3595 14.0032 16.2921 14.0316C16.2246 14.0599 16.1635 14.1014 16.1123 14.1537L9.84833 20.5784C9.73836 20.6912 9.67681 20.8425 9.67681 21.0001C9.67681 21.1576 9.73836 21.309 9.84833 21.4218L16.1111 27.8465C16.1624 27.8991 16.2236 27.9409 16.2913 27.9695C16.3589 27.998 16.4316 28.0128 16.505 28.0128C16.5785 28.0128 16.6512 27.998 16.7188 27.9695C16.7865 27.9409 16.8477 27.8991 16.899 27.8465C17.0044 27.7386 17.0634 27.5937 17.0634 27.4429C17.0634 27.2921 17.0044 27.1472 16.899 27.0393L16.8977 27.0393Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="body-area">
+                <div class="top-sec">
+                  <div class="na_ra_sec">
+                    <a href="#">
+                      <div class="name">Deluxe King Room</div>
+                    </a>
+
+                    <div class="rating">
+                      <div class="stars" data-value="3"></div>
+                    </div>
+                  </div>
+
+                  <div class="price">
+                    <span>From</span>
+                    <h4>$22</h4>
+                  </div>
+                </div>
+
+                <a href="#">
+                  <button>
+                    BOOK NOW
+                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
+                  </button>
+                </a>
+              </div>
+
+              <div class="footer-area">
+                <div class="hotel-feature-list">
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/av.png" alt="" />
+                    </div>
+                    <div class="name">AC</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/tv.png" alt="" />
+                    </div>
+                    <div class="name">Smart TV</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/wifi.png" alt="" />
+                    </div>
+                    <div class="name">High Wi-fi</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/swimming-pool.png" alt="" />
+                    </div>
+                    <div class="name">Pool</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/parking.png" alt="" />
+                    </div>
+                    <div class="name">Parking</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image-area">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room6.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room4.png" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="./assets/images/room2.png" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="swiper-button-next">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="28"
+                        y="42"
+                        width="28"
+                        height="42"
+                        transform="rotate(-180 28 42)"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M11.1023 14.9607L16.9893 20.9999L11.1023 27.0392C10.9969 27.1471 10.9379 27.2919 10.9379 27.4428C10.9379 27.5936 10.9969 27.7384 11.1023 27.8463C11.1534 27.8986 11.2145 27.9401 11.282 27.9684C11.3494 27.9968 11.4218 28.0114 11.495 28.0114C11.5681 28.0114 11.6405 27.9968 11.7079 27.9684C11.7754 27.9401 11.8365 27.8986 11.8877 27.8463L18.1517 21.4216C18.2616 21.3088 18.3232 21.1575 18.3232 20.9999C18.3232 20.8424 18.2616 20.691 18.1517 20.5782L11.8889 14.1535C11.8376 14.1009 11.7764 14.0591 11.7087 14.0305C11.6411 14.002 11.5684 13.9872 11.495 13.9872C11.4215 13.9872 11.3488 14.002 11.2812 14.0305C11.2135 14.0591 11.1523 14.1009 11.101 14.1535C10.9957 14.2614 10.9366 14.4063 10.9366 14.5571C10.9366 14.7079 10.9957 14.8528 11.101 14.9607L11.1023 14.9607Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <svg
+                      width="28"
+                      height="42"
+                      viewBox="0 0 28 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="28"
+                        height="42"
+                        fill="#141414"
+                        fill-opacity="0.5"
+                      />
+                      <path
+                        d="M16.8977 27.0393L11.0107 21.0001L16.8977 14.9608C17.0031 14.8529 17.0621 14.7081 17.0621 14.5572C17.0621 14.4064 17.0031 14.2616 16.8977 14.1537C16.8466 14.1014 16.7855 14.0599 16.718 14.0316C16.6506 14.0032 16.5782 13.9886 16.505 13.9886C16.4319 13.9886 16.3595 14.0032 16.2921 14.0316C16.2246 14.0599 16.1635 14.1014 16.1123 14.1537L9.84833 20.5784C9.73836 20.6912 9.67681 20.8425 9.67681 21.0001C9.67681 21.1576 9.73836 21.309 9.84833 21.4218L16.1111 27.8465C16.1624 27.8991 16.2236 27.9409 16.2913 27.9695C16.3589 27.998 16.4316 28.0128 16.505 28.0128C16.5785 28.0128 16.6512 27.998 16.7188 27.9695C16.7865 27.9409 16.8477 27.8991 16.899 27.8465C17.0044 27.7386 17.0634 27.5937 17.0634 27.4429C17.0634 27.2921 17.0044 27.1472 16.899 27.0393L16.8977 27.0393Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="body-area">
+                <div class="top-sec">
+                  <div class="na_ra_sec">
+                    <a href="#">
+                      <div class="name">Deluxe King Room</div>
+                    </a>
+
+                    <div class="rating">
+                      <div class="stars" data-value="3"></div>
+                    </div>
+                  </div>
+
+                  <div class="price">
+                    <span>From</span>
+                    <h4>$22</h4>
+                  </div>
+                </div>
+
+                <a href="#">
+                  <button>
+                    BOOK NOW
+                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
+                  </button>
+                </a>
+              </div>
+
+              <div class="footer-area">
+                <div class="hotel-feature-list">
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/av.png" alt="" />
+                    </div>
+                    <div class="name">AC</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/tv.png" alt="" />
+                    </div>
+                    <div class="name">Smart TV</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/wifi.png" alt="" />
+                    </div>
+                    <div class="name">High Wi-fi</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/swimming-pool.png" alt="" />
+                    </div>
+                    <div class="name">Pool</div>
+                  </div>
+
+                  <div class="feat">
+                    <div class="icon">
+                      <img src="./assets/icon/parking.png" alt="" />
+                    </div>
+                    <div class="name">Parking</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Hotel-rooms-end -->
-
-    <!-- services-start -->
-    <section>
-      <div class="wrapper">
-        <div class="services">
-          <div class="title">
-            <h4>Service</h4>
-            <h2>Hotel Services</h2>
-          </div>
-
-          <div class="list">
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/car.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">Pickup/Dropoff</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/restaurant.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">Restaurant</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/food.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">24 Hours Room Service</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/bar.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">Bar</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/parking.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">Free Parking</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/security.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">Security</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/wifi.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">Free Wifi</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/spa.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">Spa</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/av.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">AC</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/swimming-pool.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">Pool</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="icon-area">
-                <img src="./assets/icon/tv.png" alt="" />
-              </div>
-
-              <div class="body-area">
-                <div class="name">Smart TV</div>
-                <div class="das"></div>
-                <p>
-                  We are using our strengths to not only further work in our own
-                  operations.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- services-end -->
-
-    <!-- blog-start -->
-    <section>
-      <div class="wrapper">
-        <div class="blog">
-          <div class="title">
-            <h4>Blog</h4>
-            <h2>Hotel News</h2>
-          </div>
-
-          <div class="list">
-            <div class="item">
-              <img class="blog-image" src="./assets/images/blog1.png" alt="" />
-
-              <div class="details">
-                <h5>NOVEMBER 8, 2017 / LUXURY</h5>
-
-                <a href="#">
-                  <h2 class="name">YACHT CLUB MEMBER</h2>
-                </a>
-
-                <p class="desc">
-                  Lorem ipsum dolor sit amet, consectetuer elteret adipiscing
-                  elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                  sociis Theme natoque ...
-                </p>
-
-                <a href="#">
-                  <button>
-                    Read More
-                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
-                  </button>
-                </a>
-              </div>
-            </div>
-
-            <div class="item">
-              <img class="blog-image" src="./assets/images/blog2.png" alt="" />
-
-              <div class="details">
-                <h5>NOVEMBER 8, 2017 / LUXURY</h5>
-
-                <a href="#">
-                  <h2 class="name">YACHT CLUB MEMBER</h2>
-                </a>
-
-                <p class="desc">
-                  Lorem ipsum dolor sit amet, consectetuer elteret adipiscing
-                  elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                  sociis Theme natoque ...
-                </p>
-
-                <a href="#">
-                  <button>
-                    Read More
-                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
-                  </button>
-                </a>
-              </div>
-            </div>
-
-            <div class="item">
-              <img class="blog-image" src="./assets/images/blog3.png" alt="" />
-
-              <div class="details">
-                <h5>NOVEMBER 8, 2017 / LUXURY</h5>
-
-                <a href="#">
-                  <h2 class="name">YACHT CLUB MEMBER</h2>
-                </a>
-
-                <p class="desc">
-                  Lorem ipsum dolor sit amet, consectetuer elteret adipiscing
-                  elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                  sociis Theme natoque ...
-                </p>
-
-                <a href="#">
-                  <button>
-                    Read More
-                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
-                  </button>
-                </a>
-              </div>
-            </div>
-
-            <div class="item">
-              <img class="blog-image" src="./assets/images/blog4.png" alt="" />
-
-              <div class="details">
-                <h5>NOVEMBER 8, 2017 / LUXURY</h5>
-
-                <a href="#">
-                  <h2 class="name">YACHT CLUB MEMBER</h2>
-                </a>
-
-                <p class="desc">
-                  Lorem ipsum dolor sit amet, consectetuer elteret adipiscing
-                  elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                  sociis Theme natoque ...
-                </p>
-
-                <a href="#">
-                  <button>
-                    Read More
-                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
-                  </button>
-                </a>
-              </div>
-            </div>
-
-            <div class="item">
-              <img class="blog-image" src="./assets/images/blog5.png" alt="" />
-
-              <div class="details">
-                <h5>NOVEMBER 8, 2017 / LUXURY</h5>
-
-                <a href="#">
-                  <h2 class="name">YACHT CLUB MEMBER</h2>
-                </a>
-
-                <p class="desc">
-                  Lorem ipsum dolor sit amet, consectetuer elteret adipiscing
-                  elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                  sociis Theme natoque ...
-                </p>
-
-                <a href="#">
-                  <button>
-                    Read More
-                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
-                  </button>
-                </a>
-              </div>
-            </div>
-
-            <div class="item">
-              <img class="blog-image" src="./assets/images/blog6.png" alt="" />
-
-              <div class="details">
-                <h5>NOVEMBER 8, 2017 / LUXURY</h5>
-
-                <a href="#">
-                  <h2 class="name">YACHT CLUB MEMBER</h2>
-                </a>
-
-                <p class="desc">
-                  Lorem ipsum dolor sit amet, consectetuer elteret adipiscing
-                  elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                  sociis Theme natoque ...
-                </p>
-
-                <a href="#">
-                  <button>
-                    Read More
-                    <img src="./assets/icon/arrow-right-dark.svg" alt="" />
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="view-all-btn">
-            <a href="#">
-              <button>Explore More Blogs</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- blog-end -->
 
     <!-- footer-start -->
     <footer>
