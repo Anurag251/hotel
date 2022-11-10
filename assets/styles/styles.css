@@ -589,6 +589,10 @@ header .wrapper .side-nav-btn {
           box-shadow: 0 4px 10px rgba(20, 20, 20, 0.1);
 }
 
+.hotel-rooms .list .item:hover .body-area .top-sec .na_ra_sec .name {
+  color: #EE9D00;
+}
+
 .hotel-rooms .list .item .image-area {
   position: relative;
 }
