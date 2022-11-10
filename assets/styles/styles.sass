@@ -138,6 +138,7 @@ p
 /***********      section      ***********/
 section
   padding: 50px 0
+  @include bgImage()
 
   &.bg
     background-color: $light
@@ -323,14 +324,30 @@ header
         width: 90%
 
 /***********      about      ***********/
+.attractions
+  .about
+    margin: 50px 0
+    &:nth-child(1)
+      margin-top: 0
+
 .about
   position: relative
   height: 100vh
   display: flex
   align-items: center
 
+  &.switch-sec
+    margin: 50px 0
+    .image-sec
+      top: 0
+      left: 60% !important
+
+    .wrapper
+      @include grid($columns: 2fr 1fr)
+
   .image-sec
     position: absolute
+    left: 0
     width: 40%
     height: 100%
     z-index: 1
@@ -759,3 +776,457 @@ footer
         font-size: 14px
         font-weight: 400
         margin-top: 5px
+
+/***********      gallery      ***********/
+.gallery
+  .list
+    --n: 3; /* number of rows*/
+    --m: 4; /* number of columns */
+    --h: calc((100vh - (var(--n) - 1)*var(--g))/var(--n))
+    --w: calc((80vw - (var(--m) - 1)*var(--g))/var(--m))
+    --g: 10px; /* control the gap */
+    --f: 1.5; /* control the scale factor */
+
+    display: grid
+    gap: var(--g)
+    width: 100%
+    height: 100vh
+    grid-template-columns: repeat(var(--m),auto)
+
+    img
+      width: 0
+      height: 0
+      min-height: 100%
+      min-width: 100%
+      object-fit: cover
+      cursor: pointer
+      filter: grayscale(80%)
+      @include trans()
+
+      &:hover
+        filter: grayscale(0)
+        width: calc(var(--w)*var(--f))
+        height: calc(var(--h)*var(--f))
+
+/***********      contact-button      ***********/
+.contact-button
+  position: fixed
+  top: 50%
+  right: 0
+  height: 65px
+  width: 37px
+  @include flex($justify: center)
+  transform: translateY(-50%)
+  background-color: $pri
+  cursor: pointer
+  box-shadow: 0 4px 10px rgba($dark, .1)
+  z-index: 23
+  @include trans()
+  overflow: hidden
+
+  &.active
+    right: 500px
+
+    .iconContact
+      left: -50%
+
+    .iconArrow
+      left: 50%
+
+  .iconContact
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    @include trans()
+
+  .iconArrow
+    position: absolute
+    left: 150%
+    top: 50%
+    transform: translate(-50%, -50%)
+    @include trans()
+
+/***********      contact-popup      ***********/
+.contact-popup
+  position: fixed
+  right: -500px
+  top: 0
+  max-width: 500px
+  width: 100%
+  height: 100%
+  background-color: $light
+  box-shadow: 4px 0 10px rgba($dark, .1)
+  padding: 1.5rem
+  pointer-events: none
+  z-index: 22
+  @include trans()
+
+  &.active
+    right: 0
+    pointer-events: auto
+
+  .contact-title
+    h2
+      font-size: 20px
+      font-weight: 500
+
+    p
+      font-size: 13px
+      margin-top: 5px
+      line-height: 1.2rem
+
+  .contact-form
+    margin-bottom: 2rem
+
+    .form-inputs
+      margin-top: 2rem
+
+      .input-group
+        @include flex($justify: space-between)
+        margin-bottom: 2rem
+
+        .group
+          width: 46%
+
+      .group
+        position: relative
+        height: 57px
+        width: 100%
+        border-bottom: 1px solid $sec
+        display: flex
+        align-items: flex-end
+
+        label
+          position: absolute
+          top: 0
+          left: 0
+          font-size: 12px
+          text-transform: uppercase
+
+        input, textarea
+          height: 70%
+          width: 100%
+          padding: 1rem
+          font-size: 14px
+
+    .submit-btn
+      font-weight: 600
+      margin-top: 1rem
+      @include button()
+      font-size: 16px
+
+  .contact-details
+    .list
+      margin-top: 1.5rem
+
+      .item
+        @include flex($justify: flex-start)
+        margin-bottom: 1.5rem
+
+        .icon
+          height: 32px
+          width: 32px
+          border-radius: 50%
+          background-color: $pri
+          @include flex($justify: center)
+          margin-right: 10px
+
+        .text-area
+          h4
+            font-size: 15px
+
+          h6
+            font-weight: 400
+            margin-top: 2px
+            font-size: 14px
+
+/***********      room-details      ***********/
+.room-details
+  .room-details-image
+    margin-bottom: 100px
+
+    .images-sec
+      position: relative
+      height: 600px
+
+      .image-preview
+        position: relative
+        overflow: hidden
+        height: 600px
+
+        .swiper-slide
+          height: 100%
+
+          img
+            height: 100%
+            width: 100%
+            @include image()
+
+      .image-btns
+        position: absolute
+        top: 100%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 98%
+        overflow: hidden
+        z-index: 10
+
+        .swiper-slide
+          @include flex($justify: center)
+
+          .item
+            width: 240px
+            height: 150px
+
+            img
+              width: 100%
+              height: 100%
+              object-fit: cover
+
+  .hotel-details-area
+    @include grid($columns: 1.5fr 1fr)
+
+    .hotel-details
+      .navigate-btn
+        @include flex($justify: center)
+
+        li
+          position: relative
+          font-size: 18px
+          font-weight: 400
+          margin: 0 2rem
+          cursor: pointer
+          padding: .5rem 1rem
+          text-align: center
+
+          &.active
+            font-weight: 500
+            &::after
+              top: 50px
+
+          &::after
+            content: ''
+            position: absolute
+            left: 50%
+            top: 100px
+            transform: translateX(-50%) rotate(45deg)
+            height: 30px
+            width: 30px
+            background-color: $light
+            @include trans()
+
+      .list
+        position: relative
+        margin-top: 1.3rem
+        z-index: 2
+        background-color: $light
+
+        .item
+          padding: 1rem
+
+          .hotel-description
+            .hotel-feature
+              @include flex($justify: flex-start)
+              flex-wrap: wrap
+              margin-bottom: 1rem
+
+              li
+                margin-right: 1.5rem
+                margin-bottom: 1rem
+                @include flex($justify: flex-start)
+
+                &:nth-last-child(1)
+                  margin-bottom: 0
+
+                .text
+                  font-size: 14px
+                  margin-left: 5px
+
+                  strong
+                    margin-right: 2px
+
+          .room-services
+            @include grid($columns: 1fr 1fr 1fr 1fr)
+            grid-gap: 10px
+
+            .serv
+              @include flex($justify: center)
+              flex-direction: column
+              margin-bottom: 1.5rem
+
+              .name
+                text-align: center
+                font-size: 13px
+                font-weight: 400
+
+              .icon-area
+                margin-bottom: 10px
+                position: relative
+                display: inline-block
+
+                &::before
+                  content: ''
+                  position: absolute
+                  top: 50%
+                  left: 50%
+                  transform: translate(-50%, -50%)
+                  background-color: #E1E1E1
+                  border-radius: 30px
+                  height: 28px
+                  width: 63px
+                  z-index: 1
+
+                img
+                  height: 34px
+                  width: 40px
+                  object-fit: contain
+                  position: relative
+                  z-index: 2
+
+          .hotel-rulse
+            ul
+              padding-left: 1.5rem
+
+              li
+                list-style: decimal
+                margin-bottom: 1rem
+
+                &:nth-last-child(1)
+                  margin-bottom: 0
+
+                .rule-title
+                  font-size: 16px
+                  font-weight: 500
+
+                .rule-desc
+                  font-size: 16px
+                  margin-top: 3px
+
+    .room-booking-area
+      .start-booking
+        padding: 1.5rem
+        background-color: $light
+
+        .title-sec
+          @include flex($justify: space-between)
+          margin-bottom: 1rem
+
+          .form-title
+            font-size: 20px
+            font-weight: 500
+
+          .price
+            font-size: 20px
+            color: $price
+            font-weight: 500
+
+            span
+              color: $sec
+              font-size: 12px
+
+        .booking-form
+          .form-inputs
+            margin-top: 2rem
+
+            .input-group
+              @include flex($justify: space-between)
+              margin-bottom: 2rem
+
+              .group
+                width: 46%
+
+            .group
+              position: relative
+              height: 57px
+              width: 100%
+              border-bottom: 1px solid $sec
+              display: flex
+              align-items: flex-end
+
+              label
+                position: absolute
+                top: 0
+                left: 0
+                font-size: 12px
+                text-transform: uppercase
+
+              input, textarea, select
+                height: 70%
+                width: 100%
+                padding: 1rem
+                font-size: 14px
+
+              select
+                height: 100%
+                margin-bottom: -10px
+
+          .submit-btn
+            font-weight: 600
+            margin-top: 1rem
+            @include button()
+            font-size: 16px
+
+      .best-rooms
+        margin-top: 50px
+
+        .title-sec
+          font-size: 20px
+          font-weight: 500
+          margin-bottom: 30px
+
+        .list
+          .item
+            @include flex($justify: space-between)
+            margin-bottom: 1rem
+            @include trans()
+
+            &:hover
+              background-color: $light
+              box-shadow: 0 4px 10px rgba($dark, .1)
+
+              .image
+                img
+                  transform: scale(1.1)
+
+            .image
+              height: 100px
+              width: 35%
+              overflow: hidden
+
+              img
+                @include image()
+                @include trans()
+
+            .details
+              width: 65%
+              padding: .5rem
+              height: 100%
+
+              button
+                @include button()
+                font-size: 14px
+                font-weight: 600
+
+              .name-sec
+                @include flex($justify: space-between)
+                align-items: flex-start
+                margin-bottom: 18px
+
+                .name
+                  h4
+                    font-size: 16px
+                    font-weight: 500
+                    margin-bottom: 4px
+                    color: $dark
+
+                .price
+                  font-size: 16px
+                  color: $price
+                  font-weight: 500
+
+                  span
+                    color: $sec
+                    font-size: 10px
+
+/***********      testinomial      ***********/

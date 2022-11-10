@@ -189,3 +189,13 @@ valueDisplays.forEach((valueDisplay) => {
     }
   }, duration);
 });
+
+let contactButton = document.querySelector(".contact-button");
+let contactPopup = document.querySelector(".contact-popup");
+
+if (contactButton) {
+  contactButton.addEventListener("click", () => {
+    contactButton.classList.toggle("active");
+    contactPopup.classList.toggle("active");
+  });
+}
