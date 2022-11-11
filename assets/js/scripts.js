@@ -6,7 +6,7 @@ const sticky = document.querySelector("header");
 const categoriesSec = document.querySelector(".categories-sec");
 
 window.onscroll = () => {
-  if (this.scrollY > 280) {
+  if (this.scrollY > 100) {
     sticky.classList.add("sticky");
   } else {
     sticky.classList.remove("sticky");
@@ -197,5 +197,32 @@ if (contactButton) {
   contactButton.addEventListener("click", () => {
     contactButton.classList.toggle("active");
     contactPopup.classList.toggle("active");
+  });
+}
+
+const hiddenImageSec = document.querySelector(".hidden-image");
+const bgForClose = document.querySelector(".bg-for-close");
+const imageCloseBtn = document.querySelector("#imageCloseBtn");
+const hiddenImage = document.querySelector(".hidden-image img");
+const images = document.querySelectorAll(".clickToView");
+
+if (hiddenImageSec) {
+  images.forEach((image) => {
+    image.addEventListener("click", () => {
+      const imageUrl = image.getAttribute("src");
+
+      hiddenImage.setAttribute("src", imageUrl);
+
+      hiddenImageSec.classList.add("active");
+    });
+  });
+
+  imageCloseBtn.addEventListener("click", () => {
+    hiddenImageSec.classList.remove("active");
+    console.log("hello");
+  });
+
+  bgForClose.addEventListener("click", () => {
+    hiddenImageSec.classList.remove("active");
   });
 }
