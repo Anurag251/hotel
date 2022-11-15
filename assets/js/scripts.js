@@ -1,7 +1,7 @@
 const sideNavBtn = document.querySelector(".side-nav-btn");
 const sideNavcloseBtn = document.querySelector(".side-nav-close-btn");
 const sideNav = document.querySelector(".side-nav");
-const background = document.querySelector(".background");
+// const background = document.querySelector(".background");
 const sticky = document.querySelector("header");
 const categoriesSec = document.querySelector(".categories-sec");
 
@@ -17,13 +17,13 @@ if (sideNav) {
   sideNavBtn.addEventListener("click", () => {
     sideNavBtn.classList.toggle("active");
     sideNav.classList.toggle("active");
-    background.classList.toggle("active");
+    // background.classList.toggle("active");
   });
 
   sideNavcloseBtn.addEventListener("click", () => {
     sideNavBtn.classList.remove("active");
     sideNav.classList.remove("active");
-    background.classList.remove("active");
+    // background.classList.remove("active");
   });
 
   // background.addEventListener("click", () => {
@@ -226,3 +226,28 @@ if (hiddenImageSec) {
     hiddenImageSec.classList.remove("active");
   });
 }
+
+// Hignlight Link
+const navLink = document.querySelectorAll(".navLinkBtn");
+const pathname = location.pathname;
+
+let filterPathname = pathname;
+filterPathname = filterPathname.replace(/.html/, "");
+filterPathname = filterPathname.replace("/", "");
+
+// filterPathname = filterPathname.replace("{% url '", "");
+// filterPathname = filterPathname.replace("' %}", "");
+
+navLink.forEach((link, idx) => {
+  let url = link.getAttribute("href");
+  // filterUrl = url.replace("{% url '", "");
+  // filterUrl = url.replace("' %}", "");
+  filterUrl = url.replace(".html", "");
+  // filterUrl = url.replace("/", "");
+
+  if (filterPathname === filterUrl) {
+    if (`${filterUrl}.html` === url) {
+      link.classList.add("active");
+    }
+  }
+});

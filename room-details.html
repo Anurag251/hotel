@@ -943,6 +943,42 @@
     <!-- footer-start -->
     <footer>
       <div class="wrapper">
+        <div class="mob-footer">
+          <h5>© ALL RIGHTS RESERVED.</h5>
+
+          <div class="social-media">
+            <a href="#">
+              <div class="icon">
+                <i class="fab fa-facebook"></i>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="icon">
+                <i class="fab fa-pinterest"></i>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="icon">
+                <i class="fab fa-twitter"></i>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
         <div class="list">
           <div class="item">
             <div class="logo">
@@ -1086,7 +1122,22 @@
 
       var swiper = new Swiper(".room-details .room-details-image .mySwiper", {
         spaceBetween: 10,
-        slidesPerView: 5,
+        slidesPerView: 2,
+
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+        },
       });
 
       var swiper2 = new Swiper(".room-details .room-details-image .mySwiper2", {

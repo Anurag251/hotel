@@ -207,10 +207,6 @@ section .sec-bg-img {
   font-weight: 300;
 }
 
-.side-nav {
-  display: none;
-}
-
 /***********      header      ***********/
 header {
   position: fixed;
@@ -236,6 +232,10 @@ header.sticky .wrapper .logo h3 {
 
 header.sticky .wrapper .nav-links li button {
   color: #141414;
+}
+
+header.sticky .wrapper .side-nav-btn::before, header.sticky .wrapper .side-nav-btn::after, header.sticky .wrapper .side-nav-btn .das {
+  background-color: #141414;
 }
 
 header .wrapper {
@@ -268,6 +268,10 @@ header .wrapper .nav-links {
           align-items: center;
 }
 
+header .wrapper .nav-links li a.active button {
+  color: #EE9D00;
+}
+
 header .wrapper .nav-links li button {
   font-size: 15px;
   font-weight: 300;
@@ -277,12 +281,167 @@ header .wrapper .nav-links li button {
   cursor: pointer;
 }
 
-header .wrapper .nav-links li button.active {
-  color: #EE9D00;
+header .wrapper .side-nav-btn {
+  height: 20px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  display: none;
+  cursor: pointer;
 }
 
-header .wrapper .side-nav-btn {
-  display: none;
+header .wrapper .side-nav-btn.active::before {
+  width: 50%;
+}
+
+header .wrapper .side-nav-btn.active::after {
+  width: 50%;
+}
+
+header .wrapper .side-nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+header .wrapper .side-nav-btn .das {
+  height: 2.5px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  width: 100%;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+header .wrapper .side-nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/***********      side-nav      ***********/
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 260px;
+  height: 100%;
+  z-index: 100;
+  pointer-events: none;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  border-radius: 0;
+  background-color: #fff;
+  border: 10px solid rgba(255, 255, 255, 0.4);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(238, 157, 0, 0.9)), to(rgba(238, 157, 0, 0.9)));
+  background-image: linear-gradient(180deg, rgba(238, 157, 0, 0.9), rgba(238, 157, 0, 0.9));
+  padding: 1rem;
+}
+
+.side-nav.active {
+  left: 0px;
+  pointer-events: auto;
+}
+
+.side-nav .side-nav-close-btn {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  height: 30px;
+  width: 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px 0px 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #AF0000;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.side-nav .side-nav-close-btn i {
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.side-nav .side-nav-close-btn:hover i {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
+.side-nav .logo {
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.side-nav .logo h3 {
+  color: #FFFFFF;
+}
+
+.side-nav .nav-links a.active .nav-btn {
+  border: 1px solid #FFFFFF;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.side-nav .nav-links .nav-btn {
+  padding: 1rem 1rem;
+  font-size: 18px;
+  color: #FFFFFF;
+  border-radius: 0;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.4s all cubic-bazier(0, 1, 0, 1);
+  transition: 0.4s all cubic-bazier(0, 1, 0, 1);
+}
+
+.side-nav .nav-links .nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 3px 10px rgba(20, 20, 20, 0.1);
+          box-shadow: 0 3px 10px rgba(20, 20, 20, 0.1);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 /***********      banner      ***********/
@@ -908,6 +1067,41 @@ footer {
   background-color: #141414;
 }
 
+footer .mob-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+footer .mob-footer h5 {
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+footer .mob-footer .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .mob-footer .social-media .icon {
+  color: #FFFFFF;
+  margin-left: 10px;
+}
+
 footer .list .item {
   text-align: center;
   color: #FFFFFF;
@@ -1308,6 +1502,7 @@ footer .list .item ul li button {
   z-index: 22;
   -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  overflow-y: auto;
 }
 
 .contact-popup.active {
@@ -1451,6 +1646,7 @@ footer .list .item ul li button {
   font-weight: 400;
   margin-top: 2px;
   font-size: 14px;
+  max-width: 250px;
 }
 
 /***********      room-details      ***********/
@@ -1466,7 +1662,11 @@ footer .list .item ul li button {
 .room-details .room-details-image .images-sec .image-preview {
   position: relative;
   overflow: hidden;
-  height: 600px;
+  height: 100%;
+}
+
+.room-details .room-details-image .images-sec .image-preview .mySwiper2 {
+  height: 100%;
 }
 
 .room-details .room-details-image .images-sec .image-preview .swiper-slide {
@@ -1474,8 +1674,6 @@ footer .list .item ul li button {
 }
 
 .room-details .room-details-image .images-sec .image-preview .swiper-slide img {
-  height: 100%;
-  width: 100%;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -1545,6 +1743,7 @@ footer .list .item ul li button {
   cursor: pointer;
   padding: .5rem 1rem;
   text-align: center;
+  height: 40px;
 }
 
 .room-details .hotel-details-area .hotel-details .navigate-btn li.active {
@@ -1980,6 +2179,8 @@ footer .list .item ul li button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
@@ -1994,6 +2195,7 @@ footer .list .item ul li button {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 1.4rem;
+  margin-bottom: 10px;
 }
 
 .blog-page .all-blog .blog-post .item .details .post-header .post-details .icon, .blog-page .all-blog .blog-details-post .item .details .post-header .post-details .icon {

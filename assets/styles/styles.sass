@@ -1,64 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
-
-*
-  margin: 0
-  padding: 0
-  box-sizing: border-box
-  font-family: 'Rubik', sans-serif
-  border: none
-  outline: none
-  background: none
-  text-decoration: none
-  list-style: none
-  letter-spacing: 2px
-
-$pri: #EE9D00
-$sec: #676767
-$price: #AF0000
-$dark: #141414
-$light: #FFFFFF
-$para: #414141
-
-@mixin flex($justify)
-  display: flex
-  justify-content: $justify
-  align-items: center
-
-@mixin grid($columns)
-  display: grid
-  grid-template-columns: $columns
-  grid-gap: 20px
-
-@mixin bgImage()
-  background-position: center
-  background-size: cover
-  background-repeat: no-repeat
-
-@mixin image()
-  height: 100%
-  width: 100%
-  object-fit: cover
-
-@mixin dark($opacity)
-  position: absolute
-  left: 0
-  top: 0
-  bottom: 0
-  right: 0
-  background-color: rgba(#000000, $opacity)
-  pointer-events: none
-
-@mixin shrinkLabel()
-  top: -12px
-  left: 5px
-  transform: translateY(-50%) scale(.8)
-
-@mixin trans()
-  transition: all .5s cubic-bezier(0.77, 0, 0.175, 1)
-
-@mixin button()
-  font-size: 18px
-  cursor: pointer
+@import './mixin.sass'
 
 body
   background-color: #F7F7F7
@@ -170,9 +110,6 @@ section
     font-size: 34px
     font-weight: 300
 
-.side-nav
-  display: none
-
 /***********      header      ***********/
 header
   position: fixed
@@ -198,6 +135,10 @@ header
           button
             color: $dark
 
+      .side-nav-btn
+        &::before, &::after, .das
+          background-color: $dark
+
   .wrapper
     @include flex($justify: space-between)
 
@@ -211,6 +152,10 @@ header
       @include flex($justify: flex-end)
 
       li
+        a.active
+          button
+            color: $pri
+
         button
           font-size: 15px
           font-weight: 300
@@ -219,11 +164,123 @@ header
           color: $light
           cursor: pointer
 
-          &.active
-            color: $pri
-
     .side-nav-btn
+      height: 20px
+      width: 30px
+      @include flex($justify: center)
+      position: relative
       display: none
+      cursor: pointer
+
+      &.active
+        &::before
+          width: 50%
+
+        &::after
+          width: 50%
+
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+        height: 2.5px
+        background-color: $light
+        border-radius: 10px
+        @include trans()
+
+      .das
+        height: 2.5px
+        background-color: $light
+        border-radius: 10px
+        width: 100%
+        @include trans()
+
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 2.5px
+        background-color: $light
+        border-radius: 10px
+        @include trans()
+
+/***********      side-nav      ***********/
+.side-nav
+  position: fixed
+  top: 0
+  left: -300px
+  width: 260px
+  height: 100%
+  z-index: 100
+  pointer-events: none
+  @include trans()
+  border-radius: 0
+  background-color: #fff
+  border: 10px solid rgba($light, .4)
+  background-image: linear-gradient(180deg, rgba($pri, .9), rgba($pri, .9))
+  padding: 1rem
+
+  &.active
+    left: 0px
+    pointer-events: auto
+
+  .side-nav-close-btn
+    position: absolute
+    top: 10px
+    right: -10px
+    height: 30px
+    width: 40px
+    background-color: $light
+    border-radius: 30px 0px 0 30px
+    @include flex($justify: center)
+    color: $price
+    font-size: 16px
+    cursor: pointer
+
+    i
+      @include trans()
+      transform: translateX(5px)
+
+    &:hover
+      i
+        transform: translateX(-5px)
+
+  .logo
+    height: 60px
+    width: 100%
+    @include flex($justify: center)
+
+    h3
+      color: $light
+
+  .nav-links
+    a.active
+      .nav-btn
+        // background-color: rgba($pri, .8)
+        // box-shadow: 0 0 10px rgba($dark, .1)
+        // color: $dark
+        border: 1px solid $light
+        transform: scale(1.03)
+
+    .nav-btn
+      padding: 1rem 1rem
+      font-size: 18px
+      color: $light
+      border-radius: 0
+      width: 100%
+      text-align: left
+      margin-bottom: 5px
+      cursor: pointer
+      transition: .4s all cubic-bazier(0,1,0,1)
+
+      &:hover
+        background-color: rgba($light,.1)
+        box-shadow: 0 3px 10px rgba($dark, .1)
+        transform: scale(1.03)
 
 /***********      banner      ***********/
 .banner
@@ -327,6 +384,7 @@ header
 .attractions
   .about
     margin: 50px 0
+
     &:nth-child(1)
       margin-top: 0
 
@@ -338,6 +396,7 @@ header
 
   &.switch-sec
     margin: 50px 0
+
     .image-sec
       top: 0
       left: 60% !important
@@ -614,6 +673,21 @@ footer
   padding: 3rem 0
   background-color: $dark
 
+  .mob-footer
+    @include flex($justify: space-between)
+    display: none
+
+    h5
+      font-size: 13px
+      color: $light
+
+    .social-media
+      @include flex(flex-end)
+
+      .icon
+        color: $light
+        margin-left: 10px
+
   .list
     .item
       text-align: center
@@ -867,6 +941,7 @@ footer
   pointer-events: none
   z-index: 22
   @include trans()
+  overflow-y: auto
 
   &.active
     right: 0
@@ -957,6 +1032,7 @@ footer
             font-weight: 400
             margin-top: 2px
             font-size: 14px
+            max-width: 250px
 
 /***********      room-details      ***********/
 .room-details
@@ -970,14 +1046,16 @@ footer
       .image-preview
         position: relative
         overflow: hidden
-        height: 600px
+        // height: 600px
+        height: 100%
+
+        .mySwiper2
+          height: 100%
 
         .swiper-slide
           height: 100%
 
           img
-            height: 100%
-            width: 100%
             @include image()
 
       .image-btns
@@ -1016,6 +1094,7 @@ footer
           cursor: pointer
           padding: .5rem 1rem
           text-align: center
+          height: 40px
 
           &.active
             font-weight: 500
@@ -1292,11 +1371,13 @@ footer
 
           .post-header
             @include flex($justify: flex-start)
+            flex-wrap: wrap
             margin-bottom: 1rem
 
             .post-details
               @include flex($justify: flex-start)
               margin-right: 1.4rem
+              margin-bottom: 10px
 
               .icon
                 margin-right: 5px
